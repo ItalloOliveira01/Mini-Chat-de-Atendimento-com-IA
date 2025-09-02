@@ -1,1 +1,1 @@
-# Mini-Chet-de-Atendimento-com-IA
+# Mini-Chat-de-Atendimento-com-IA
