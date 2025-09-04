@@ -1,42 +1,70 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+    font-family: "Epunda Slab", serif; /* Define a fonte principal do site */
+    background: #f4f4f4; /* Cor de fundo suave */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
 }
 
-.chat{
-    background: white;
-    width: 300px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.chat {
+    background: white; /* Fundo branco para a caixa do chat */
+    width: 300px; /* Largura fixa da caixa */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
 }
 
-#mensagens{
-    height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border:1px solid #ddd;
-    padding: 5px;
+.chat h2 {
+    font-family: "Epunda Slab", serif; /* Usa a mesma fonte do body */
+    font-size: 1.5em; /* Tamanho maior para o título */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 18px; /* Espaço abaixo do título */
+    padding-bottom: 10px; /* Espaço interno abaixo do texto */
+    border-bottom: 2px solid #007bff; /* Linha azul abaixo do título */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    color: #222; /* Cor do texto */
+    background: linear-gradient(90deg, #e3f0ff 0%, #fff 100%); /* Degradê de fundo */
+    border-radius: 8px 8px 0 0; /* Cantos arredondados no topo */
 }
 
-input{
-    width: 70%;
-    padding: 5px
+#mensagens {
+    height: 200px; /* Altura fixa para a área de mensagens */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-bottom: 15px; /* Espaço abaixo da área de mensagens */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    padding: 8px; /* Espaçamento interno */
+    background: #fafafa; /* Fundo levemente acinzentado */
+    border-radius: 6px; /* Cantos arredondados */
 }
 
-button{
-    width: 25%;
-    padding: 5px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+.input-area {
+    display: flex; /* Usa flexbox para alinhar input e botão */
+    gap: 8px; /* Espaço entre input e botão */
+    width: 100%; /* Ocupa toda a largura da caixa do chat */
 }
 
-button:hover{
-    background:#0056b3;
+input[type="text"] {
+    flex: 1; /* Faz o input crescer para ocupar o espaço disponível */
+    padding: 7px 10px; /* Espaçamento interno (vertical e horizontal) */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1em; /* Tamanho da fonte padrão */
+    outline: none; /* Remove a borda azul ao focar */
+    box-sizing: border-box; /* Inclui borda e padding no tamanho total */
+}
+
+button {
+    padding: 7px 15px; /* Espaçamento interno do botão */
+    background: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 1em; /* Tamanho da fonte igual ao input */
+    transition: background 0.2s; /* Suaviza a transição de cor ao passar o mouse */
+}
+
+button:hover {
+    background: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
 }
